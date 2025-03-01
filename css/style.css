@@ -1,0 +1,562 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    outline: none;
+    color: white;
+}
+
+body {
+    height: 100%;
+    max-width: 100vw;
+    background-color: #000;
+    display: flex;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/* This is the line between the main div and sidebar.  */
+.hr {
+    height: 100vh;
+    width: 0.05rem;
+    border-left: .05rem solid white;
+    opacity: .3;
+    position: sticky;
+    top: 0;
+    bottom: 0;
+}
+
+/* This style is for the header and the main for outline.  */
+header { 
+    max-height: 100vh;
+    width: 15rem;
+    overflow: hidden;
+    position: sticky;           
+    top: 0;
+    bottom: 0;
+}
+
+.main {
+    flex: 1;
+    display: flex;
+    overflow: auto;
+    min-height: 100vh; 
+}
+
+
+/* The style for the header is now begin.  */
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+}
+
+/* This is the style for the instagram logo. */
+.logo {
+    width: 100%;
+    height: 5.75rem;
+    margin-bottom: 1.25rem;
+    padding: 1.5rem .75rem 1rem;
+}
+
+.logo i {
+    display: none;
+}
+
+.logo > h3 {
+    font-family: "Grand Hotel", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 2em;
+}
+
+
+/* The style is for the Navbar.  */
+.navbar {
+    width: 100%;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}
+
+.navbar-common {
+    height: 3rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin: .13rem 0 .35rem 0;
+    padding: .75rem;
+}
+
+/* This is the style for the navbar-second  */
+.navbar-second {
+    width: 100%;
+}
+
+
+/* This style is for the navbar icon  */
+.navbar-common-icon {
+    font-size: 1.5rem;
+    width: 3rem;
+}
+
+.nav-title-main {
+    font-size: 1em;
+    font-weight: 700;
+}
+
+.non-active .navbar-common-icon {
+    font-weight: 400;
+}
+
+/* Hover effect for the navbar icon  */
+.navbar-common:hover {
+    background-color: #ffffff1e;
+    border-radius: .5rem;
+}
+
+
+/* This style is for the main div  */
+.main-body {
+    flex: 1;
+    padding: 1rem 0 0 8.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+/* This is the style for the stories.  */
+.stories {
+    width: 100%;
+    height: 6.25rem;
+    padding: .5rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+/* This is the style for the single profile.  */
+.story {
+    width: 4.5rem;
+    height: 5.25rem;
+}
+
+.story-user {
+    width: 4rem;
+    height: 4rem;
+    content: fit-content;
+    border-top: .15rem solid #bf00b3;
+    border-right: .15rem solid #bf00b3;
+    border-left: .15rem solid #ffc800;
+    border-bottom: .15rem solid #ffc800;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.story-border {
+    width: 3.5rem;
+    height: 3.5rem;
+    content: fit-content;
+    border: 2px solid black;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3.5em;
+}
+
+.story-border img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.user-name {
+    font-size: .9rem;
+    text-align: center;
+}
+
+/* This is the style for the arrow  */
+.story-arrow {
+    position: absolute; 
+    right: 1.3rem;
+    bottom: 2.8rem;
+    background-color: #ffffff;
+    height: 1.5rem;
+    width: 1.5rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.story-arrow i {
+    color: black;
+    opacity: .5;
+}
+
+/* This is the style for the post.  */
+.posts {
+    margin-top: 2rem;
+    min-width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.post {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-width: 100%;
+}
+
+.post-title {
+    width: 29.5rem;
+    height: 2.75rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0 0 0.75rem 0.2rem;
+    position: relative;
+}
+
+.post-img {
+    height: 2.8rem;
+    width: 2.8rem;
+    border-radius: 50%;
+    border-top: .15rem solid #bf00b3;
+    border-right: .15rem solid #bf00b3;
+    border-left: .15rem solid #ffc800;
+    border-bottom: .15rem solid #ffc800;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 1rem;
+}
+
+.post-border {
+    height: 2.4rem;
+    width: 2.4rem;
+}
+
+.post-border img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* This style is for text  */
+.post-user-name {
+    font-size: .9em;
+    font-weight: 600;
+}
+
+
+/* This is for the post time  */
+.post-time {
+    margin-left: .5rem;
+    list-style-type: none;
+}
+
+.post-time li::before{
+    content: "• ";
+    margin-right: 0;
+}
+
+/* This style is for the menu bottom.  */
+.post-menu {
+    position: absolute;
+    right: 1rem;  
+}
+
+
+/* This is for the image title  */
+.posts-img {
+    height: 36.5rem;
+    width: 29.5em;
+    border: .02rem solid rgba(255, 255, 255, 0.127); 
+    border-radius: .5rem;  
+}
+
+.posts-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.post-description {
+    width: 100%;
+    padding: 0 5rem 1.5rem;
+}
+
+/* This style is for the like comment button .  */
+.post-emoji {
+    width: 100%;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.post-emoji i {
+    font-size: 1.5rem;
+    margin: 0 .5rem;
+}
+
+.post-emoji .different {
+    position: absolute;
+    right: 0;
+}
+
+/* This is for the font weight of the post-like.  */
+.post-like {
+    line-height: 2rem;
+}
+
+.low-visibile {
+    line-height: 2rem;
+    color: #ffffff82;
+    font-size: .9rem;
+}
+
+/* this si the style for the emoji side from the comment  */
+.post-commonet-emoji {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: .5rem;
+}
+
+/* this style is for the hr line below the post.  */
+.post-hr {
+    width: 100%;
+    height: .005rem;
+    margin-top: .5rem;
+    border-top: .005rem solid rgba(255, 255, 255, 0.337);
+}
+
+/* This style is for the footer  */
+footer {
+    padding-top: 2.4rem;
+    width: 32rem;
+    padding-left: 4rem;
+}
+
+.main-footer {
+    width: 18rem;
+    height: fit-content;
+}
+
+/* This is the style for the suggestion box.  */
+.suggestion {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    margin-bottom: 1rem;
+}
+
+.suggestion-img {
+    width: 2.75rem;
+    height: 2.75rem;
+    border-radius: 40%;
+}
+
+.suggestion-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.suggestion-name {
+    grid-column: 2/5;
+}
+
+.suggestion-name-first {
+    font-weight: 700;
+    font-size: .9rem;
+}
+
+.suggestion-name-second {
+    font-size: .8rem;
+    color: #919191;
+}
+
+.suggestion-switch {
+    align-self: center;
+    color: #0084db;
+    font-size: .8rem;
+}
+
+.suggestion-switch:hover {
+    color: white;
+}
+
+
+/* This is the style for the suggested tab. */
+.suggestion-text {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 2rem 0 1.5rem 0;
+    padding-right: 1rem;
+}
+
+.suggestion-text p {
+    font-size: .9rem;
+    font-weight: 600;
+}
+
+.suggestion-text p:first-child {
+    color: #ffffff7d;
+}
+
+.suggestion-text-see:hover {
+    color: #ffffff7d;
+}
+
+
+
+/* This style is for the the main footer.  */
+.footer-text {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+    font-size: .79rem;
+    opacity: .5;
+    font-weight: 100;
+    list-style-type: none;
+}
+
+/* .footer- */
+
+.footer-text span:hover {
+    text-decoration: underline;
+}
+
+/* This style is for the last footer of the instagram.  */
+.footer-last {
+    margin-top: 2rem;
+    font-size: .8rem;
+    color: #ffffff75;
+    font-weight: 300;
+}
+
+
+@media (max-width: 1260px) {
+    header {
+        width: 4.5rem;
+        padding: .5rem .75rem 1.25rem;
+    }
+    .logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .logo i {
+        display: block;
+        font-size: 1.8rem;
+        font-weight: 300;
+    }
+    .header-hide {
+        display: none;
+    }
+    /* .navbar-common {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        place-items: center;
+    } */
+}
+
+@media (max-width: 1100px) {
+    footer {
+        display: none;
+    }
+}
+
+@media (max-width: 750px) {
+    .navbar {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        background-color: black;
+        width: 100%;
+    }
+
+    .logo {
+        position: fixed;
+        top: 0;
+        left: 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        background-color: black;
+        margin: 0;
+        padding: 0;
+        height: 4rem;
+        border-bottom: .5px solid rgba(255, 255, 255, 0.386);
+    }
+
+    .logo-hide {
+        display: block;
+        position: absolute;
+        left: 2rem;
+    }
+
+    .logo i {
+        display: none;
+    }
+
+    .main {
+        margin-top: 3rem;
+    }
+
+    header {
+        width: 0;
+    }
+
+    .hr {
+        display: none;
+    }
+
+    .main-body {
+        padding: 1rem;
+    }
+
+    .navbar-common {
+        height: fit-content;
+        width: fit-content;
+        margin: 0;
+        padding: 0;
+        margin: 1rem 0;
+    }
+
+    .header-sidebar {
+        position: absolute;
+        bottom: 41.5rem;
+        right: 0;
+        opacity: 1;
+        z-index: 10;
+    }
+
+    .stories, .post-title, .post-emoji {
+        z-index: -1;
+    }
+
+    
+}
